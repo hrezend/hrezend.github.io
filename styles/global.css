@@ -6,6 +6,7 @@
     --text-color: #868E96;
     --bold-text-color: #343A40;
     --context-green: #55FF66;
+    --bold-context-green: #3bb247;
 }
 *{
     padding: 0;
@@ -27,6 +28,15 @@ h1 {
     text-transform: uppercase;
     color: var(--bold-text-color);
 }
+h2 {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: var(--bold-text-color);
+    margin: 0px 0px 10px 0px;
+}
 .container{
     width: 100vw;
     height: 100vh;
@@ -43,6 +53,27 @@ h1 {
     justify-content: space-between;
     align-items: flex-start;
     z-index: 1;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.links{
+    display: flex;
+    flex-direction: row;
+}
+.links a{
+    font-size: 4rem;
+    color: var(--bold-text-color);
+    margin: 0px 20px 0px 0px;
+    transition: all 1s;
+}
+.links a:hover{
+    font-size: 4rem;
+    color: var(--bold-context-green);
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
 }
 .content-bottom{
     display: flex;
@@ -218,8 +249,8 @@ h1 {
         flex-direction: column;
         align-items: center;
     }
-    .button-contact{
-        margin: 40px;
+    .contact{
+        margin: 25px 0px 0px 0px;
     }
     .content-bottom{
         flex-direction: column;
