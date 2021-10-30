@@ -2,7 +2,7 @@ const icons = ["fab fa-html5", "fab fa-css3", "fab fa-java", "fab fa-js", "fab f
 var count = 0;
 
 function changeIconsTechnologies(){
-    var random = Math.floor(Math.random() * icons.length);
+    //var random = Math.floor(Math.random() * icons.length);
     var icon = document.getElementById("fab-technologies");
 
     icon.setAttribute("class", icons[count]);

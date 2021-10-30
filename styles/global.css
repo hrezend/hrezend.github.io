@@ -46,6 +46,8 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    overflow: hidden;
 }
 .content-top{
     display: flex;
@@ -67,13 +69,13 @@ h2 {
     font-size: 4rem;
     color: var(--bold-text-color);
     margin: 0px 20px 0px 0px;
-    transition: all 1s;
+    transition: all 1.5s;
 }
 .links a:hover{
     font-size: 4rem;
     color: var(--bold-context-green);
-    -webkit-transform: rotateZ(360deg);
-    transform: rotateZ(360deg);
+    -webkit-transform: rotateZ(10deg);
+    transform: rotateZ(10deg);
 }
 .content-bottom{
     display: flex;
@@ -167,6 +169,9 @@ h2 {
     overflow: hidden;
     cursor: default; 
     font-size: 6.5rem;
+
+    width: 200px;
+    text-align: center;
 }
 .technologies span{
     position: absolute;
@@ -176,7 +181,7 @@ h2 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 10px;
+    height: 5px;
     background: linear-gradient(90deg,transparent,var(--context-green));
     animation: animate1 1s linear infinite;
 }
@@ -191,7 +196,7 @@ h2 {
 .technologies span:nth-child(2){
     top: -100%;
     right: 0;
-    width: 10px;
+    width: 5px;
     height: 100%;
     background: linear-gradient(180deg,transparent,var(--context-green));
     animation: animate2 1s linear infinite;
@@ -207,9 +212,9 @@ h2 {
 }
 .technologies span:nth-child(3){
     bottom: 0;
-    right: 0;
+    right: 100%;
     width: 100%;
-    height: 10px;
+    height: 5px;
     background: linear-gradient(270deg,transparent,var(--context-green));
     animation: animate3 1s linear infinite;
     animation-delay: 0.50s;
@@ -225,7 +230,7 @@ h2 {
 .technologies span:nth-child(4){
     bottom: -100%;
     left: 0;
-    width: 10px;
+    width: 5px;
     height: 100%;
     background: linear-gradient(360deg,transparent,var(--context-green));
     animation: animate4 1s linear infinite;
@@ -261,5 +266,8 @@ h2 {
     }
     .background{
         display: none;
+    }
+    .technologies{
+        margin: 20px 0px 0px 0px;
     }
 }
