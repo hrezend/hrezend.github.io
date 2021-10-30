@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root{
+    --bg-color: #FCFCFC;
+    --text-color: #868E96;
+    --bold-text-color: #343A40;
+    --context-green: #55FF66;
+}
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+h1 {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 5.5rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: var(--bold-text-color);
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.content-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 1;
+}
+.content-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 1;
+}
+.projects{
+    z-index: 1;
+}
+.background{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    background-position: top 0 right;
+    background-image: url("../media/images/background.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+
+    -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: gray;
+}
+
+/**
+* BUTTON (CONTACT)
+*/
+.button-contact {
+    position: relative;
+    display: inline-flex;
+    width: 250px;
+    height: 55px;
+    margin: 0px;
+    perspective: 1000px;
+}
+.button-contact  a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+.button-contact  a:before,
+.button-contact  a:after{
+    position: absolute;
+    display: flex;
+    height: 55px;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid var(--context-green);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.button-contact  a:before{
+    content: "HIRE ME";
+    color: var(--bold-text-color);
+    background: var(--context-green);
+    transform: rotateY(0deg) translateZ(25px);
+}
+.button-contact  a:after{
+    content: "LET'S WORK TOGETHER";
+    color: var(--context-green);
+    transform: rotateX(90deg) translateZ(25px);
+}
+.button-contact  a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+}
+
+/**
+* DIV (TECHNOLOGIES)
+*/
+.technologies{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    color: var(--context-green);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    cursor: default; 
+    font-size: 6.5rem;
+}
+.technologies span{
+    position: absolute;
+    display: block;
+}
+.technologies span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg,transparent,var(--context-green));
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+.technologies span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,var(--context-green));
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+.technologies span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(270deg,transparent,var(--context-green));
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+.technologies span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,var(--context-green));
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+    .content-top{
+        flex-direction: column;
+        align-items: center;
+    }
+    .button-contact{
+        margin: 40px;
+    }
+    .content-bottom{
+        flex-direction: column;
+        align-items: center;
+    }
+    .apresentation{
+        text-align: center;
+    }
+    .background{
+        display: none;
+    }
+}
