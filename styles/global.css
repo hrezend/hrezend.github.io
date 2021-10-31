@@ -46,8 +46,6 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    overflow: hidden;
 }
 .content-top{
     display: flex;
@@ -70,12 +68,24 @@ h2 {
     color: var(--bold-text-color);
     margin: 0px 20px 0px 0px;
     transition: all 1.5s;
+
+    animation: flip-link 4s linear infinite;
 }
 .links a:hover{
     font-size: 4rem;
     color: var(--bold-context-green);
+    /*
     -webkit-transform: rotateZ(10deg);
     transform: rotateZ(10deg);
+    */
+}
+@keyframes flip-link {
+    25%{
+        transform: rotateY(360deg);
+    }
+    100%{
+        transform: rotateY(360deg);;
+    }
 }
 .content-bottom{
     display: flex;
@@ -94,8 +104,8 @@ h2 {
     left: 0;
     z-index: -1;
 
-    background-position: top 0 right;
-    background-image: url("../media/images/background.png");
+    background-position: top 80px right -50%;
+    background-image: url("../media/images/background2.png");
     background-size: auto 100%;
     background-repeat: no-repeat;
     height: 100%;
@@ -269,5 +279,11 @@ h2 {
     }
     .technologies{
         margin: 20px 0px 0px 0px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .background{
+        background-position: top 80px right -200px;
     }
 }
