@@ -104,7 +104,7 @@ h2 {
     left: 0;
     z-index: -1;
 
-    background-position: top 80px right -50%;
+    background-position: top 80px right -55%;
     background-image: url("../media/images/background2.png");
     background-size: auto 100%;
     background-repeat: no-repeat;
@@ -274,16 +274,14 @@ h2 {
     .apresentation{
         text-align: center;
     }
-    .background{
-        display: none;
-    }
     .technologies{
-        margin: 20px 0px 0px 0px;
+        margin: 20px 0px 20px 0px;
     }
-}
-
-@media screen and (max-width: 900px){
-    .background{
-        background-position: top 80px right -200px;
+    .projects img{
+        width: 100%;
+        margin: 0px 0px 20px 0px;
+    }
+    body{
+        overflow-x: hidden;
     }
 }
