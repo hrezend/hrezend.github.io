@@ -99,18 +99,18 @@ h2 {
 }
 .background{
     position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    z-index: -1;
 
-    background-position: top 80px right -55%;
+    z-index: -1;
     background-image: url("../media/images/background2.png");
-    background-size: auto 100%;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+
     height: 100%;
     width: 100%;
 
+    opacity: 0.4;
     -webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
 	filter: gray;
@@ -276,6 +276,9 @@ h2 {
     }
     .technologies{
         margin: 20px 0px 20px 0px;
+    }
+    .background{
+        opacity: 0.2;
     }
     .projects img{
         width: 100%;
