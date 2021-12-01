@@ -95,7 +95,23 @@ h2 {
     z-index: 1;
 }
 .projects{
+    display: none; /* mudar para flex para aparecer a div dos projetos*/
+    justify-content: center;
+    overflow: hidden;
+
     z-index: 1;
+    width: 310px;
+    height: 200px;
+
+    -webkit-transition: -webkit-transform .7s ease;
+    transition: transform .7s ease;
+}
+.projects:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.projects a{
+    text-decoration: none;
 }
 .background{
     position: absolute;
@@ -256,6 +272,9 @@ h2 {
 }
 
 @media screen and (max-width: 600px){
+    body{
+        overflow-x: hidden;
+    }
     h1{
         font-size: 4rem;
         line-height: 4.5rem;
@@ -274,6 +293,9 @@ h2 {
     .apresentation{
         text-align: center;
     }
+    .projects{
+        display: none;
+    }
     .technologies{
         margin: 20px 0px 20px 0px;
     }
@@ -283,9 +305,6 @@ h2 {
     .projects img{
         width: 100%;
         margin: 0px 0px 20px 0px;
-    }
-    body{
-        overflow-x: hidden;
     }
     .button-contact  a:after{
         content: "LET'S WORK TOGETHER";
