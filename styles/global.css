@@ -278,7 +278,7 @@ h2 {
         margin: 20px 0px 20px 0px;
     }
     .background{
-        opacity: 0.2;
+        display: none;
     }
     .projects img{
         width: 100%;
@@ -286,5 +286,11 @@ h2 {
     }
     body{
         overflow-x: hidden;
+    }
+    .button-contact  a:after{
+        content: "LET'S WORK TOGETHER";
+        color: var(--bold-text-color);
+        background: var(--context-green);
+        transform: rotateX(90deg) translateZ(25px);
     }
 }
