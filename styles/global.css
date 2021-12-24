@@ -66,10 +66,12 @@ h2 {
 .links a{
     font-size: 4rem;
     color: var(--bold-text-color);
-    margin: 0px 20px 0px 0px;
     transition: all 1.5s;
 
     animation: flip-link 4s linear infinite;
+}
+.links a + a {
+    padding-left: 15px;
 }
 .links a:hover{
     font-size: 4rem;
@@ -95,7 +97,7 @@ h2 {
     z-index: 1;
 }
 .projects{
-    display: none; /* mudar para flex para aparecer a div dos projetos*/
+    display: flex; /* mudar para flex para aparecer a div dos projetos*/
     justify-content: center;
     overflow: hidden;
 
@@ -284,7 +286,7 @@ h2 {
         align-items: center;
     }
     .contact{
-        margin: 25px 0px 0px 0px;
+        margin: 50px 0px 0px 0px;
     }
     .content-bottom{
         flex-direction: column;
@@ -298,6 +300,7 @@ h2 {
     }
     .technologies{
         margin: 20px 0px 20px 0px;
+        display: none;
     }
     .background{
         display: none;
@@ -311,5 +314,18 @@ h2 {
         color: var(--bold-text-color);
         background: var(--context-green);
         transform: rotateX(90deg) translateZ(25px);
+    }
+}
+
+@media screen and (max-width: 800px){
+    .background{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 2560px){
+    .background{
+        background-size: cover;
+        background-position: 0% 20%;
     }
 }
