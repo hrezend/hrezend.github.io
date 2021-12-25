@@ -2,7 +2,6 @@
 <html lang="en">
 
     <head>
-
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="author" content="Hérson Reis Rezende dos Santos">
@@ -11,8 +10,8 @@
         <title>Portfólio - Hérson Rezende</title>
         <link rel="shortcut icon" href="media/images/icon.png" type="image/x-icon" />
         <link rel="stylesheet" href="styles/global.css" type="text/css">
+        <link rel="stylesheet" href="styles/modal.css" type="text/css">
         <link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
-
     </head>
 
     <body id="body-app">
@@ -40,13 +39,21 @@
                 <div id="contact" class="contact">
                     <h2>Need a software developer?</h2>
                     <span class="button-contact">
-                        <a href="mailto:herson.academico@gmail.com" target="_blank" translate="yes"></a>
+                        <a href="https://wa.me/5575998878594" target="_blank"></a>
                     </span>
                 </div>
             </div>
             <div id="content-bottom" class="content-bottom">
-                <div id="projects" class="projects">
-                    <img src="media/projects/nlw-heat.png"/>
+                <div id="topics" class="topics">
+                    <button id="my-graduations" onclick="createModalMyGraduations()">
+                        <i class="fas fa-user-graduate"></i>
+                    </button>
+                    <button id="my-experiences" onclick="createModalMyExperiences()">
+                        <i class="fas fa-history"></i>
+                    </button>
+                    <button id="my-languages" onclick="createModalMyLanguages()">
+                        <i class="fas fa-language"></i>
+                    </button>
                 </div>
                 <div class="technologies">
                     <span></span>
@@ -56,11 +63,13 @@
                     <i id="fab-technologies" class="fab fa-html5"></i>
                 </div>
             </div>
+
+            <span class="span-size-device">*for a better experience you must use a largest resolution device</span>
         </div>
 
         <!-- Custom scripts for this template -->
         <script src="scripts/app.js"></script>
-
+        <script src="scripts/modal.js"></script>
     </body>
 
 </html>

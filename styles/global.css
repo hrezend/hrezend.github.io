@@ -37,6 +37,13 @@ h2 {
     color: var(--bold-text-color);
     margin: 0px 0px 10px 0px;
 }
+.span-size-device{
+    display: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #f1604d;
+}
 .container{
     width: 100vw;
     height: 100vh;
@@ -59,6 +66,9 @@ h2 {
     flex-direction: column;
     align-items: center;
 }
+.contact h2 {
+    font-size: 20px;
+}
 .links{
     display: flex;
     flex-direction: row;
@@ -75,7 +85,7 @@ h2 {
 }
 .links a:hover{
     font-size: 4rem;
-    color: var(--bold-context-green);
+    color: var(--context-green);
     /*
     -webkit-transform: rotateZ(10deg);
     transform: rotateZ(10deg);
@@ -96,24 +106,32 @@ h2 {
     align-items: flex-end;
     z-index: 1;
 }
-.projects{
-    display: flex; /* mudar para flex para aparecer a div dos projetos*/
-    justify-content: center;
-    overflow: hidden;
+.topics{
+    display: flex; /* mudar para flex para aparecer a div dos projetos, none para sumir*/
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
 
     z-index: 1;
-    width: 310px;
-    height: 200px;
+    width: 330px;
+    height: 300px;
+}
+.topics button{
+    position: relative;
+    top: 0px;
+	left: 0px;
 
-    -webkit-transition: -webkit-transform .7s ease;
-    transition: transform .7s ease;
-}
-.projects:hover{
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-}
-.projects a{
+    background-color: var(--context-green);
+    color: var(--bg-color);
+
+    height: 100px;
+    width: 100px;
+    font-size: 40px;
+
+    cursor: pointer;
     text-decoration: none;
+    border: none;
+    border-radius: 50px;
 }
 .background{
     position: absolute;
@@ -273,7 +291,7 @@ h2 {
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 700px){
     body{
         overflow-x: hidden;
     }
@@ -295,19 +313,14 @@ h2 {
     .apresentation{
         text-align: center;
     }
-    .projects{
+    .topics{
         display: none;
     }
     .technologies{
-        margin: 20px 0px 20px 0px;
         display: none;
     }
     .background{
         display: none;
-    }
-    .projects img{
-        width: 100%;
-        margin: 0px 0px 20px 0px;
     }
     .button-contact  a:after{
         content: "LET'S WORK TOGETHER";
@@ -315,9 +328,12 @@ h2 {
         background: var(--context-green);
         transform: rotateX(90deg) translateZ(25px);
     }
+    .span-size-device{
+        display: block;
+    }
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 900px){
     .background{
         display: none;
     }
