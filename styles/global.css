@@ -137,8 +137,8 @@ h2 {
     position: absolute;
 
     z-index: -1;
-    background-image: url("../media/images/background2.png");
-    background-size: cover;
+    background-image: url("../media/images/background3.png");
+    background-size: center;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
